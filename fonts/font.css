@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'RetroFont';
+    src: url('RetroFont.ttf'); /* Подключи свой ttf-файл сюда */
+  }
+  
+  body {
+    font-family: 'RetroFont', cursive;
+  }
+  

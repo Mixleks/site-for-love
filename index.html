@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Для моей любимой 💖</title>
+    <link rel="stylesheet" href="/fonts/font.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="heart-container"></div>
+
+    <header>
+      <h1>Для тебя, моя нежность</h1>
+    </header>
+
+    <main>
+      <section class="poem">
+        <p>Ты — свет в моём окне,</p>
+        <p>Ты — нежный шёпот утра...</p>
+        <p>С тобой я счастлив, как во сне,</p>
+        <p>Ты — моя мечта и чудо!</p>
+      </section>
+
+      <section class="gallery">
+        <video
+          src="Video.MOV"
+          controls
+          autoplay
+          muted
+          loop
+          class="result__video"
+          poster=""
+        ></video>
+        <img src="photo_2025-01-23_19-58-24.jpg" alt="Наша прогулка" />
+      </section>
+    </main>
+
+    <footer>
+      <p>С любовью, твой 💘</p>
+    </footer>
+
+    <script>
+      // Всплывающие сердечки
+      document.addEventListener("click", function (e) {
+        const heart = document.createElement("div");
+        heart.className = "heart";
+        heart.style.left = e.clientX + "px";
+        heart.style.top = e.clientY + "px";
+        document.body.appendChild(heart);
+        setTimeout(() => heart.remove(), 1000);
+      });
+    </script>
+  </body>
+</html>
