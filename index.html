@@ -41,14 +41,14 @@
     </footer>
 
     <script>
-      // Всплывающие сердечки
       document.addEventListener("click", function (e) {
-        const heart = document.createElement("div");
-        heart.className = "heart";
-        heart.style.left = e.clientX + "px";
-        heart.style.top = e.clientY + "px";
-        document.body.appendChild(heart);
-        setTimeout(() => heart.remove(), 1000);
+        const face = document.createElement("img");
+        face.src = "funny-face.png"; // имя файла
+        face.className = "funny-popup";
+        face.style.left = e.clientX + "px";
+        face.style.top = e.clientY + "px";
+        document.body.appendChild(face);
+        setTimeout(() => face.remove(), 1000);
       });
     </script>
   </body>

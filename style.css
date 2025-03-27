@@ -28,14 +28,14 @@ h1 {
 .gallery {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 1rem;
   padding: 1rem;
   align-items: stretch;
+  justify-items: center;
 }
 
 .gallery img,
 .result__video {
-  width: 100%;
+  width: 80%;
   height: 100%;
   object-fit: cover;
   border-radius: 10px;
@@ -53,35 +53,6 @@ footer {
   margin-top: 2rem;
 }
 
-/* Сердечки */
-.heart {
-  position: fixed;
-  width: 20px;
-  height: 20px;
-  background: red;
-  transform: rotate(45deg);
-  animation: float 1s ease-out forwards;
-}
-
-.heart::before,
-.heart::after {
-  content: "";
-  position: absolute;
-  width: 20px;
-  height: 20px;
-  background: red;
-  border-radius: 50%;
-}
-
-.heart::before {
-  top: -10px;
-  left: 0;
-}
-
-.heart::after {
-  left: -10px;
-  top: 0;
-}
 
 @keyframes float {
   to {
@@ -98,5 +69,24 @@ footer {
   .poem {
     font-size: 1rem;
     padding: 1rem;
+  }
+}
+
+.funny-popup {
+  position: fixed;
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 50%;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  animation: floatUp 1s ease-out forwards;
+  z-index: 9999;
+}
+
+@keyframes floatUp {
+  to {
+    transform: translate(-50%, -150%) scale(1.2);
+    opacity: 0;
   }
 }
